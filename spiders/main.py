@@ -8,9 +8,14 @@ chrome.get(request_url)
 # html = chrome.page_source
 # print(html)
 
-navs = chrome.find_element_by_xpath('//div[@class = "nav-items"]/ul')
-print(navs)
-print(navs.text)
+# xpath
+# navs = chrome.find_elements_by_xpath('//div[@class = "nav-items"]/ul/li/a')
+
+# selector
+navs = chrome.find_elements_by_css_selector('div.nav-items>ul>li>a')
+
+for nav in navs:
+  print(nav.text)
 
 # chrome.close()
 chrome.quit()
