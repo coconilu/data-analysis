@@ -3,7 +3,7 @@ import io
 import sys
 sys.stdout = io.TextIOWrapper(sys.stdout.buffer, encoding='utf-8')
 request_url = 'https://movie.douban.com/'
-chrome = webdriver.Chrome('C:\chrome\chromedriver.exe')
+chrome = webdriver.Chrome('C:\\chrome\\chromedriver.exe')
 chrome.get(request_url)
 # html = chrome.page_source
 # print(html)
